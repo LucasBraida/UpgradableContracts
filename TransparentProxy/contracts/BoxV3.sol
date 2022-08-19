@@ -3,9 +3,9 @@
 pragma solidity ^0.8.0;
 
 contract BoxV3 {
-    uint64 private value2;
-    uint256 private value;
 
+    uint256 private value;
+    uint64 private value2;
     // Emitted when the stored value changes
     event ValueChanged(uint256 newValue);
 
@@ -27,6 +27,10 @@ contract BoxV3 {
 
     function setValue2() public {
         value2 = 3;
+    }
+
+    function retrieveValue2() public view returns (uint256) {
+        return value2;
     }
 }
 
